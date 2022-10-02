@@ -13,7 +13,7 @@ if(isset($_POST['but_logout'])){
     header('Location: ../index.php');
 }
 ?>
-<meta http-equiv="refresh" content="5;url=../index.php" />
+<!--<meta http-equiv="refresh" content="5;url=../index.php" />-->
  <div class="conatainer-fluid" >
     <div class="container">
   
