@@ -23,5 +23,7 @@ Route::get('/', function () {
 Route::get('add-employee', [EmployeeController::class, 'create']);
 Route::post('add-employee', [EmployeeController::class, 'store']);
 Route::get('employee', [EmployeeController::class, 'index']);
+Route::get('edit-employee/{id}', [EmployeeController::class, 'edit']);
+Route::put('update-employee/{id}', [EmployeeController::class, 'update']);
 
 

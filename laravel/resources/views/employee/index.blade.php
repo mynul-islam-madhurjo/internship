@@ -7,7 +7,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Homepage</h4>
+                        <h4 style="text-align: center">Homepage</h4>
                     </div>
                     <div class="card-body">
 
@@ -26,7 +26,7 @@
                                     <td>{{ $item->email }}</td>
                                     <td>{{ $item->address }}</td>
                                     <td>
-                                        <a href="" class="btn btn-primary btn-sm">Edit</a>
+                                        <a href="{{ url('edit-employee/'.$item->id) }}" class="btn btn-primary btn-sm">Update</a>
                                     </td>
                                     <td>
                                         <a href="" class="btn btn-danger btn-sm">Delete</a>
