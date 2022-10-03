@@ -29,4 +29,5 @@ Route::put('update-employee/{id}', [EmployeeController::class, 'update']);
 Route::get('delete-employee/{id}', [EmployeeController::class, 'destroy']);
 
 
-
+Auth::routes();
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

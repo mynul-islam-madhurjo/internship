@@ -1,5 +1,5 @@
-@extends('employee.layout')
-
+{{--@extends('employee.layout')--}}
+@extends('layouts.app')
 @section('content')
 <div class="container">
     <div class="row justify-content-center" style="padding-top: 20px;">
@@ -19,7 +19,9 @@
 
             <div class="card">
                 <div class="card-header" >
-                    <h4>Insert New Employee</h4>
+                    <h4>Insert New Employee
+                        <a href="{{ url('home') }}" class="btn btn-danger float-end" style="float: right;">BACK</a>
+                    </h4>
                 </div>
                 <div class="card-body" >
 
