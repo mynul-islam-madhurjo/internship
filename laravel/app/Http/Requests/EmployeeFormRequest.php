@@ -27,7 +27,6 @@ class EmployeeFormRequest extends FormRequest
             'name' => [
                 'required',
                 'string',
-                'max:191',
             ],
             'email' => [
                 'required',

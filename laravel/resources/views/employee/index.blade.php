@@ -5,12 +5,17 @@
     <div class="container">
         <div class="row" style="padding-top: 20px;">
             <div class="col-md-12">
+                @if (session('status'))
+                    <h6 class="alert alert-success">{{ session('status') }}</h6>
+                @endif
                 <div class="card">
                     <div class="card-header">
                         <h4 style="text-align: center">Homepage</h4>
                     </div>
                     <div class="card-body">
-
+                        <div style="padding-bottom: 10px;">
+                            <a href="{{ url('add-employee/') }}" class="btn btn-primary btn-sm">Add New Employee</a>
+                        </div>
                         <table class="table table-bordered table-striped">
                             <thead>
                             <tr>
@@ -29,7 +34,7 @@
                                         <a href="{{ url('edit-employee/'.$item->id) }}" class="btn btn-primary btn-sm">Update</a>
                                     </td>
                                     <td>
-                                        <a href="" class="btn btn-danger btn-sm">Delete</a>
+                                        <a href="{{ url('delete-employee/'.$item->id) }}" class="btn btn-danger btn-sm">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

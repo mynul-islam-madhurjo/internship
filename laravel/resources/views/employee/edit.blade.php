@@ -9,7 +9,13 @@
                 @if (session('status'))
                     <h6 class="alert alert-success">{{ session('status') }}</h6>
                 @endif
-
+                @if ($errors->any())
+                    <ul class="alert alert-warning">
+                        @foreach ($errors->all() as $error)
+                            <li> {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                @endif
                 <div class="card">
                     <div class="card-header">
                         <h4>Edit & Update Employee
