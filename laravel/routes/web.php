@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\ValidationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,5 +26,6 @@ Route::post('add-employee', [EmployeeController::class, 'store']);
 Route::get('employee', [EmployeeController::class, 'index']);
 Route::get('edit-employee/{id}', [EmployeeController::class, 'edit']);
 Route::put('update-employee/{id}', [EmployeeController::class, 'update']);
+
 
 

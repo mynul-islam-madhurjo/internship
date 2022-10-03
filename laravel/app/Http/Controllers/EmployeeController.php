@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmployeeFormRequest;
 use App\Models\employee;
 use Illuminate\Http\Request;
 
@@ -34,8 +35,18 @@ class EmployeeController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(EmployeeFormRequest $request)
     {
+//        $this->validated($request, [
+//            'name' => 'required|unique:posts|max:255',
+//            'email' => 'required',
+//            'address' => 'required',
+//        ]);
+
+        $data = $request->validated();
+//        employee::create($data);
+//        return redirect()->back()->with('status','Employee Added Successfully');
+
         $employee = new employee;
         $employee->name = $request->input('name');
         $employee->email = $request->input('email');
